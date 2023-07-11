@@ -1,0 +1,51 @@
+* subcircuit for 3 bit full adder using 28 mosfets (14 pmos + 14 nmos)
+* technology used is TSMC_180nm.txt
+* the nodes a b c d are input nodes 
+
+
+
+* M1 D G S B nmos/P w=8 l=4
+
+* -----------------SUBCIRCUIT OF 3-BIT FULL ADDER--------------
+.subckt HalfAdder a b n_sum n_carry gnd high
+
+* .param SUPPLY = 0.6
+* .global high gnd
+* .param width_nmos=44
+* .param width_pmos=44
+* .param length_nmos=22
+* .param length_pmos=22
+
+Mp5 an a high high pmos W=44nm L=22nm
+Mp6 bn b high high pmos W=44nm L=22nm
+
+Mp1 n_sum b n1 n1 pmos W=44nm L=22nm
+Mp2 n_sum bn  n2 n2 pmos W=44nm L=22nm
+Mp3 n1 an high high pmos W=44nm L=22nm
+Mp4 n2 a high high pmos W=44nm L=22nm
+
+Mn5 an a gnd gnd nmos W=44nm L=22nm
+Mn6 bn b gnd gnd nmos W=44nm L=22nm
+
+Mn1 n_sum an n3 n3 nmos W=44nm L=22nm
+Mn2 n3 bn gnd gnd nmos W=44nm L=22nm
+Mn3 n_sum a n4 n4 nmos W=44nm L=22nm
+Mn4 n4 b gnd gnd nmos W=44nm L=22nm
+
+* X1 a b n_carry gnd and2
+
+
+Mp7 nn1 a high high pmos W=44nm L=22nm
+Mp8 nn1 b high high pmos W=44nm L=22nm
+Mp9 n_carry nn1 high high pmos W=44nm L=22nm
+
+Mn7 nn1 a nn2 nn2 nmos W=44nm L=22nm
+Mn8 nn2 b gnd gnd nmos W=44nm L=22nm
+Mn9 n_carry nn1 gnd gnd nmos W=44nm L=22nm
+
+
+
+.ends HalfAdder
+* ----------------------END OF SUBCIRCUIT----------------------
+
+.end

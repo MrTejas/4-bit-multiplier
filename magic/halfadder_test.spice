@@ -1,0 +1,150 @@
+* SPICE3 file created from halfadder_test.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+
+
+M1000 halfadder_0/and_0/m1_59_58# inB halfadder_0/and_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 halfadder_0/and_0/nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=500 ps=218
+M1002 halfadder_0/and_0/m1_59_58# inB vdd halfadder_0/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=549 ps=230
+M1003 vdd inA halfadder_0/and_0/m1_59_58# halfadder_0/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 carry halfadder_0/and_0/m1_59_58# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 carry halfadder_0/and_0/m1_59_58# vdd halfadder_0/and_0/inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+M1006 halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/nand_1/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1007 halfadder_0/xor_0/nand_1/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/m1_51_58# vdd halfadder_0/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1009 vdd inA halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1010 halfadder_0/xor_0/m1_51_58# inB halfadder_0/xor_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1011 halfadder_0/xor_0/nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1012 halfadder_0/xor_0/m1_51_58# inB vdd halfadder_0/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1013 vdd inA halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1014 halfadder_0/xor_0/m1_140_2# inB halfadder_0/xor_0/nand_2/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1015 halfadder_0/xor_0/nand_2/a_n5_n50# halfadder_0/xor_0/m1_51_58# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1016 halfadder_0/xor_0/m1_140_2# inB vdd halfadder_0/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1017 vdd halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1018 sum halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/nand_3/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1019 halfadder_0/xor_0/nand_3/a_n5_n50# halfadder_0/xor_0/m1_144_120# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1020 sum halfadder_0/xor_0/m1_140_2# vdd halfadder_0/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1021 vdd halfadder_0/xor_0/m1_144_120# sum halfadder_0/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 halfadder_0/xor_0/nand_2/w_n27_n3# halfadder_0/xor_0/m1_51_58# 0.13fF
+C1 halfadder_0/and_0/m1_59_58# halfadder_0/and_0/nand_0/w_n27_n3# 0.13fF
+C2 carry halfadder_0/and_0/m1_59_58# 0.03fF
+C3 inB inA 3.28fF
+C4 halfadder_0/xor_0/m1_144_120# vdd 0.13fF
+C5 sum gnd 0.05fF
+C6 halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/m1_51_58# 0.30fF
+C7 inB halfadder_0/xor_0/nand_2/w_n27_n3# 0.13fF
+C8 halfadder_0/xor_0/nand_3/a_n5_n50# halfadder_0/xor_0/m1_140_2# 0.08fF
+C9 inA halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C10 carry halfadder_0/and_0/inverter_0/w_0_0# 0.04fF
+C11 vdd halfadder_0/and_0/nand_0/w_n27_n3# 0.04fF
+C12 vdd carry 0.10fF
+C13 halfadder_0/xor_0/nand_0/a_n5_n50# gnd 0.05fF
+C14 halfadder_0/xor_0/nand_3/w_n27_n3# vdd 0.04fF
+C15 halfadder_0/xor_0/m1_140_2# gnd 0.13fF
+C16 inB halfadder_0/xor_0/nand_0/a_n5_n50# 0.08fF
+C17 halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/m1_51_58# 0.20fF
+C18 halfadder_0/xor_0/m1_140_2# inB 0.20fF
+C19 inA halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C20 halfadder_0/xor_0/m1_144_120# gnd 0.05fF
+C21 halfadder_0/and_0/m1_59_58# halfadder_0/and_0/inverter_0/w_0_0# 0.08fF
+C22 gnd carry 0.07fF
+C23 inB halfadder_0/and_0/nand_0/w_n27_n3# 0.13fF
+C24 halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/nand_2/w_n27_n3# 0.13fF
+C25 sum halfadder_0/xor_0/m1_140_2# 0.20fF
+C26 vdd halfadder_0/and_0/inverter_0/w_0_0# 0.10fF
+C27 halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C28 halfadder_0/xor_0/nand_2/a_n5_n50# gnd 0.05fF
+C29 halfadder_0/xor_0/m1_144_120# inA 0.32fF
+C30 halfadder_0/xor_0/nand_2/a_n5_n50# inB 0.08fF
+C31 sum halfadder_0/xor_0/m1_144_120# 0.30fF
+C32 inA halfadder_0/and_0/nand_0/w_n27_n3# 0.13fF
+C33 gnd halfadder_0/and_0/m1_59_58# 0.07fF
+C34 inB halfadder_0/and_0/m1_59_58# 0.20fF
+C35 halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/m1_144_120# 0.46fF
+C36 sum halfadder_0/xor_0/nand_3/w_n27_n3# 0.13fF
+C37 inB vdd 0.11fF
+C38 halfadder_0/xor_0/m1_140_2# halfadder_0/xor_0/nand_3/w_n27_n3# 0.13fF
+C39 vdd halfadder_0/xor_0/nand_0/w_n27_n3# 0.04fF
+C40 inA halfadder_0/and_0/m1_59_58# 0.30fF
+C41 gnd halfadder_0/and_0/nand_0/a_n5_n50# 0.05fF
+C42 halfadder_0/xor_0/m1_51_58# gnd 0.23fF
+C43 inB halfadder_0/and_0/nand_0/a_n5_n50# 0.08fF
+C44 inB halfadder_0/xor_0/m1_51_58# 0.63fF
+C45 halfadder_0/xor_0/nand_3/a_n5_n50# gnd 0.05fF
+C46 halfadder_0/xor_0/m1_144_120# halfadder_0/xor_0/nand_3/w_n27_n3# 0.13fF
+C47 halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C48 vdd halfadder_0/xor_0/nand_1/w_n27_n3# 0.04fF
+C49 vdd inA 0.79fF
+C50 halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/nand_1/a_n5_n50# 0.08fF
+C51 halfadder_0/xor_0/nand_2/w_n27_n3# vdd 0.04fF
+C52 inB gnd 0.45fF
+C53 halfadder_0/xor_0/m1_51_58# halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C54 inB halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C55 halfadder_0/xor_0/m1_51_58# inA 0.63fF
+C56 gnd halfadder_0/xor_0/nand_1/a_n5_n50# 0.05fF
+C57 halfadder_0/xor_0/nand_3/a_n5_n50# Gnd 0.02fF
+C58 sum Gnd 0.53fF
+C59 halfadder_0/xor_0/m1_140_2# Gnd 1.13fF
+C60 halfadder_0/xor_0/m1_144_120# Gnd 1.16fF
+C61 halfadder_0/xor_0/nand_3/w_n27_n3# Gnd 1.55fF
+C62 halfadder_0/xor_0/nand_2/a_n5_n50# Gnd 0.02fF
+C63 inB Gnd 2.06fF
+C64 halfadder_0/xor_0/nand_2/w_n27_n3# Gnd 1.55fF
+C65 halfadder_0/xor_0/nand_0/a_n5_n50# Gnd 0.02fF
+C66 halfadder_0/xor_0/nand_0/w_n27_n3# Gnd 1.55fF
+C67 halfadder_0/xor_0/nand_1/a_n5_n50# Gnd 0.02fF
+C68 gnd Gnd 9.83fF
+C69 vdd Gnd 6.51fF
+C70 halfadder_0/xor_0/m1_51_58# Gnd 1.80fF
+C71 inA Gnd 2.15fF
+C72 halfadder_0/xor_0/nand_1/w_n27_n3# Gnd 1.55fF
+C73 carry Gnd 0.19fF
+C74 halfadder_0/and_0/m1_59_58# Gnd 0.67fF
+C75 halfadder_0/and_0/inverter_0/w_0_0# Gnd 0.73fF
+C76 halfadder_0/and_0/nand_0/a_n5_n50# Gnd 0.02fF
+C77 halfadder_0/and_0/nand_0/w_n27_n3# Gnd 1.55fF
+
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(sum)+20 v(carry)+30
+
+.endc
+
+.end

@@ -1,0 +1,17 @@
+* subcircuit for 4 bit adder
+* .include halfadder.sub
+* .include fulladder.sub
+* .include 22nm_MGK.pm
+
+* --------------SUBCIRCUIT OF $ BIT ADDER USING $ FULL ADDER----------
+
+.subckt  4bitadder A0 A1 A2 A3 B0 B1 B2 B3 S0 S1 S2 S3 C4 gnd high
+
+X1 A0 B0 S0 C1 gnd high HalfAdder
+X2 A1 B1 C1 S1 C2 gnd high FullAdder
+X3 A2 B2 C2 S2 C3 gnd high FullAdder
+X4 A3 B3 C3 S3 C4 gnd high FullAdder
+
+.ends 4bitadder
+
+.end

@@ -1,0 +1,3 @@
+.include 22nm_MGK.pm
+.param SUPPLY = 0.6
+.global vdd gnd

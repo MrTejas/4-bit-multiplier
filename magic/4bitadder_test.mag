@@ -1,0 +1,41 @@
+magic
+tech scmos
+timestamp 1669296869
+<< metal1 >>
+rect 1073 631 1095 682
+rect 1380 633 1402 684
+rect 1720 637 1742 688
+rect 2061 638 2083 689
+rect 2498 633 2522 700
+rect 2879 635 2903 702
+rect 3244 641 3268 708
+rect 3565 649 3589 716
+rect 458 -10 480 41
+rect 1583 -21 1605 30
+rect 2395 -21 2417 30
+rect 3024 -15 3046 36
+rect 3468 -17 3490 34
+<< metal2 >>
+rect 3797 539 3819 590
+rect 3812 20 3834 71
+use 4bitadder  4bitadder_0
+timestamp 1669296483
+transform 1 0 3434 0 1 106
+box -3434 -106 428 556
+<< labels >>
+rlabel metal1 3565 649 3589 716 1 inA0
+rlabel metal1 3244 641 3268 708 1 inA1
+rlabel metal1 2879 635 2903 702 1 inA2
+rlabel metal1 2498 633 2522 700 1 inA3
+rlabel metal1 2061 638 2083 689 1 inB0
+rlabel metal1 1720 637 1742 688 1 inB1
+rlabel metal1 1380 633 1402 684 1 inB2
+rlabel metal1 1073 631 1095 682 1 inB3
+rlabel metal1 3468 -17 3490 34 1 S0
+rlabel metal1 3024 -15 3046 36 1 S1
+rlabel metal1 2395 -21 2417 30 1 S2
+rlabel metal1 1583 -21 1605 30 1 S3
+rlabel metal1 458 -10 480 41 1 C4
+rlabel metal2 3797 539 3819 590 1 vdd
+rlabel metal2 3812 20 3834 71 1 gnd
+<< end >>

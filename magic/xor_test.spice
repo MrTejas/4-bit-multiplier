@@ -1,0 +1,117 @@
+* SPICE3 file created from xor_test.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+
+
+
+M1000 xor_0/m1_144_120# xor_0/m1_51_58# xor_0/nand_1/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 xor_0/nand_1/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=384 ps=160
+M1002 xor_0/m1_144_120# xor_0/m1_51_58# vdd xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=396 ps=160
+M1003 vdd inA xor_0/m1_144_120# xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 xor_0/m1_51_58# inB xor_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1005 xor_0/nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1006 xor_0/m1_51_58# inB vdd xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1007 vdd inA xor_0/m1_51_58# xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 xor_0/m1_140_2# inB xor_0/nand_2/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1009 xor_0/nand_2/a_n5_n50# xor_0/m1_51_58# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1010 xor_0/m1_140_2# inB vdd xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1011 vdd xor_0/m1_51_58# xor_0/m1_140_2# xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1012 out xor_0/m1_140_2# xor_0/nand_3/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1013 xor_0/nand_3/a_n5_n50# xor_0/m1_144_120# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1014 out xor_0/m1_140_2# vdd xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1015 vdd xor_0/m1_144_120# out xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 xor_0/m1_140_2# xor_0/nand_3/w_n27_n3# 0.13fF
+C1 xor_0/m1_51_58# xor_0/m1_144_120# 0.20fF
+C2 xor_0/nand_0/w_n27_n3# inB 0.13fF
+C3 xor_0/m1_140_2# inB 0.20fF
+C4 xor_0/m1_51_58# xor_0/nand_0/w_n27_n3# 0.13fF
+C5 vdd inA 0.50fF
+C6 vdd xor_0/nand_2/w_n27_n3# 0.04fF
+C7 xor_0/m1_140_2# xor_0/m1_144_120# 0.46fF
+C8 xor_0/m1_51_58# xor_0/m1_140_2# 0.30fF
+C9 inB xor_0/nand_2/a_n5_n50# 0.08fF
+C10 out xor_0/nand_3/w_n27_n3# 0.13fF
+C11 vdd xor_0/nand_3/w_n27_n3# 0.04fF
+C12 gnd xor_0/nand_0/a_n5_n50# 0.05fF
+C13 xor_0/nand_1/w_n27_n3# inA 0.13fF
+C14 out xor_0/m1_144_120# 0.30fF
+C15 gnd xor_0/nand_3/a_n5_n50# 0.05fF
+C16 vdd xor_0/m1_144_120# 0.13fF
+C17 gnd inB 0.37fF
+C18 xor_0/m1_140_2# out 0.20fF
+C19 xor_0/nand_0/w_n27_n3# vdd 0.04fF
+C20 gnd xor_0/m1_144_120# 0.05fF
+C21 xor_0/m1_51_58# gnd 0.23fF
+C22 xor_0/nand_1/w_n27_n3# xor_0/m1_144_120# 0.13fF
+C23 xor_0/nand_1/w_n27_n3# xor_0/m1_51_58# 0.13fF
+C24 xor_0/m1_140_2# gnd 0.13fF
+C25 xor_0/m1_51_58# xor_0/nand_1/a_n5_n50# 0.08fF
+C26 gnd xor_0/nand_2/a_n5_n50# 0.05fF
+C27 inB inA 0.49fF
+C28 xor_0/nand_2/w_n27_n3# inB 0.13fF
+C29 inA xor_0/m1_144_120# 0.32fF
+C30 inB xor_0/nand_0/a_n5_n50# 0.08fF
+C31 xor_0/m1_51_58# inA 0.63fF
+C32 out gnd 0.05fF
+C33 xor_0/m1_51_58# xor_0/nand_2/w_n27_n3# 0.13fF
+C34 xor_0/nand_0/w_n27_n3# inA 0.13fF
+C35 xor_0/m1_140_2# xor_0/nand_2/w_n27_n3# 0.13fF
+C36 xor_0/nand_1/w_n27_n3# vdd 0.04fF
+C37 xor_0/nand_3/w_n27_n3# xor_0/m1_144_120# 0.13fF
+C38 xor_0/m1_51_58# inB 0.63fF
+C39 xor_0/m1_140_2# xor_0/nand_3/a_n5_n50# 0.08fF
+C40 gnd xor_0/nand_1/a_n5_n50# 0.05fF
+C41 xor_0/nand_3/a_n5_n50# Gnd 0.02fF
+C42 out Gnd 0.50fF
+C43 xor_0/m1_140_2# Gnd 1.13fF
+C44 xor_0/m1_144_120# Gnd 1.16fF
+C45 xor_0/nand_3/w_n27_n3# Gnd 1.55fF
+C46 xor_0/nand_2/a_n5_n50# Gnd 0.02fF
+C47 inB Gnd 1.52fF
+C48 xor_0/nand_2/w_n27_n3# Gnd 1.55fF
+C49 xor_0/nand_0/a_n5_n50# Gnd 0.02fF
+C50 xor_0/nand_0/w_n27_n3# Gnd 1.55fF
+C51 xor_0/nand_1/a_n5_n50# Gnd 0.02fF
+C52 gnd Gnd 3.14fF
+C53 vdd Gnd 1.66fF
+C54 xor_0/m1_51_58# Gnd 1.80fF
+C55 inA Gnd 1.59fF
+C56 xor_0/nand_1/w_n27_n3# Gnd 1.55fF
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(out)+30
+
+.endc
+
+.end

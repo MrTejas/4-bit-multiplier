@@ -1,0 +1,49 @@
+magic
+tech scmos
+timestamp 1669293643
+<< metal1 >>
+rect 129 259 134 308
+rect 256 295 262 308
+rect 139 290 262 295
+rect 361 297 368 306
+rect 361 293 661 297
+rect 139 259 143 290
+rect 418 264 652 270
+rect 657 264 661 293
+rect -168 124 -147 132
+rect -28 116 -23 154
+rect 418 138 427 264
+rect 411 129 427 138
+rect 927 131 938 140
+rect -28 112 2 116
+rect 476 114 519 118
+rect -30 -7 -21 88
+rect 476 -7 485 114
+rect -30 -19 486 -7
+rect 928 -40 938 131
+rect 321 -53 938 -40
+rect 321 -55 700 -53
+rect 321 -81 333 -55
+<< metal2 >>
+rect -148 285 42 286
+rect -148 275 907 285
+rect -96 189 -86 275
+rect 216 251 224 275
+rect 725 254 733 275
+rect -107 -23 -99 57
+rect 226 -23 234 4
+rect 684 -23 693 8
+rect -151 -33 909 -23
+use or  or_0
+timestamp 1669292154
+transform -1 0 -34 0 1 130
+box -9 -75 115 63
+use halfadder  halfadder_0
+timestamp 1669290883
+transform 1 0 174 0 1 5
+box -174 -5 241 260
+use halfadder  halfadder_1
+timestamp 1669290883
+transform 1 0 692 0 1 7
+box -174 -5 241 260
+<< end >>

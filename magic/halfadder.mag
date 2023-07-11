@@ -1,0 +1,31 @@
+magic
+tech scmos
+timestamp 1669290883
+<< metal1 >>
+rect -45 200 -40 260
+rect -45 97 -40 195
+rect -35 93 -31 260
+rect -35 92 -25 93
+rect -41 88 -25 92
+<< m2contact >>
+rect -45 195 -40 200
+rect -13 177 -8 182
+<< metal2 >>
+rect -165 246 183 252
+rect -128 160 -122 246
+rect 76 235 81 246
+rect -40 195 -8 200
+rect -13 182 -8 195
+rect -125 3 -119 59
+rect 114 3 120 14
+rect -162 -3 186 3
+rect 114 -5 120 -3
+use and  and_0
+timestamp 1669290443
+transform -1 0 -44 0 1 47
+box -3 8 130 118
+use xor  xor_0
+timestamp 1669289427
+transform 1 0 -6 0 1 60
+box -22 -52 247 179
+<< end >>

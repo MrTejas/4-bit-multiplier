@@ -1,0 +1,32 @@
+* SPICE3 file created from inverter.ext - technology: scmos
+.include 22nm_MGK.pm
+.param SUPPLY=1
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 1 0ns 0.5ns 0.5ns 10ns 20ns
+vinB inB gnd pulse 0 1 0ns 0.5ns 0.5ns 20ns 40ns
+
+
+
+M1000 out inA gnd Gnd nmos w=4 l=2
++  ad=20 pd=18 as=20 ps=18
+M1001 out inA vdd vdd pmos w=9 l=2
++  ad=45 pd=28 as=54 ps=30
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(out)+2
+
+.endc
+
+.end

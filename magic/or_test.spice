@@ -1,0 +1,81 @@
+* SPICE3 file created from or_test.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+
+
+M1000 out or_0/m1_38_n44# or_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 or_0/nand_0/a_n5_n50# or_0/m1_38_n14# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=136 ps=76
+M1002 out or_0/m1_38_n44# vdd or_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=207 ps=100
+M1003 vdd or_0/m1_38_n14# out or_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 or_0/m1_38_n14# inA gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 or_0/m1_38_n14# inA vdd or_0/inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+M1006 or_0/m1_38_n44# inB gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1007 or_0/m1_38_n44# inB vdd or_0/inverter_1/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+C0 vdd or_0/m1_38_n44# 0.10fF
+C1 gnd or_0/m1_38_n14# 0.11fF
+C2 gnd inA 0.02fF
+C3 vdd or_0/m1_38_n14# 0.10fF
+C4 out or_0/m1_38_n44# 0.20fF
+C5 vdd inA 0.10fF
+C6 vdd or_0/nand_0/w_n27_n3# 0.04fF
+C7 out or_0/m1_38_n14# 0.30fF
+C8 vdd or_0/inverter_0/w_0_0# 0.28fF
+C9 or_0/m1_38_n44# or_0/m1_38_n14# 0.39fF
+C10 out or_0/nand_0/w_n27_n3# 0.13fF
+C11 or_0/m1_38_n44# or_0/nand_0/w_n27_n3# 0.13fF
+C12 or_0/m1_38_n14# inA 0.03fF
+C13 or_0/m1_38_n14# or_0/nand_0/w_n27_n3# 0.13fF
+C14 or_0/nand_0/a_n5_n50# gnd 0.05fF
+C15 or_0/m1_38_n14# or_0/inverter_0/w_0_0# 0.04fF
+C16 gnd inB 0.02fF
+C17 inA or_0/inverter_0/w_0_0# 0.08fF
+C18 inB or_0/inverter_1/w_0_0# 0.08fF
+C19 gnd or_0/inverter_1/w_0_0# 0.14fF
+C20 gnd vdd 0.15fF
+C21 vdd or_0/inverter_1/w_0_0# 0.13fF
+C22 or_0/nand_0/a_n5_n50# or_0/m1_38_n44# 0.08fF
+C23 gnd out 0.05fF
+C24 or_0/m1_38_n44# inB 0.03fF
+C25 gnd or_0/m1_38_n44# 0.26fF
+C26 or_0/m1_38_n44# or_0/inverter_1/w_0_0# 0.04fF
+C27 inB Gnd 0.27fF
+C28 or_0/inverter_1/w_0_0# Gnd 0.73fF
+C29 inA Gnd 0.22fF
+C30 or_0/inverter_0/w_0_0# Gnd 0.73fF
+C31 or_0/nand_0/a_n5_n50# Gnd 0.02fF
+C32 gnd Gnd 3.03fF
+C33 vdd Gnd 0.79fF
+C34 out Gnd 0.48fF
+C35 or_0/m1_38_n44# Gnd 0.68fF
+C36 or_0/m1_38_n14# Gnd 0.69fF
+C37 or_0/nand_0/w_n27_n3# Gnd 1.55fF
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(out)+30
+
+.endc
+
+.end

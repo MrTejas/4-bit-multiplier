@@ -1,0 +1,21 @@
+* subcircuit for 2 bit and 
+* technology used is 22nm_MGK.pm.txt
+* the nodes a b are input nodes 
+
+* -----------------SUBCIRCUIT OF 3-BIT FULL ADDER--------------
+.subckt and2 a b y gnd high
+
+
+Mp1 n1 a high high pmos W=44nm L=22nm
+Mp2 n1 b high high pmos W=44nm L=22nm
+Mp3 y n1 high high pmos W=44nm L=22nm
+
+Mn1 n1 a n2 n2 nmos W=44nm L=22nm
+Mn2 n2 b gnd gnd nmos W=44nm L=22nm
+Mn3 y n1 gnd gnd nmos W=44nm L=22nm
+
+
+.ends and2
+* ----------------------END OF SUBCIRCUIT----------------------
+
+.end

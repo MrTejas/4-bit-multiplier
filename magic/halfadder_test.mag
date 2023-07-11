@@ -1,0 +1,23 @@
+magic
+tech scmos
+timestamp 1669291159
+<< metal1 >>
+rect 148 276 153 285
+rect 158 275 162 285
+rect 430 144 439 153
+rect 10 127 22 131
+<< metal2 >>
+rect 224 268 228 278
+rect 237 11 241 21
+use halfadder  halfadder_0
+timestamp 1669290883
+transform 1 0 193 0 1 20
+box -174 -5 241 260
+<< labels >>
+rlabel metal1 148 276 153 285 5 inA
+rlabel metal1 158 275 162 285 5 inB
+rlabel metal2 224 268 228 278 1 vdd
+rlabel metal2 237 11 241 21 1 gnd
+rlabel metal1 10 127 22 131 1 carry
+rlabel metal1 430 144 439 153 7 sum
+<< end >>

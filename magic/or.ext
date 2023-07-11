@@ -1,0 +1,43 @@
+timestamp 1669292154
+version 8.2
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use inverter inverter_0 1 0 4 0 1 27
+use inverter inverter_1 1 0 4 0 1 -39
+use nand nand_0 1 0 77 0 1 15
+node "m1_n9_n46#" 0 40.692 -9 -46 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40 28 0 0 0 0 0 0 0 0 0 0
+node "m1_38_n44#" 1 122.481 38 -44 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 153 74 0 0 0 0 0 0 0 0 0 0
+node "m1_104_n6#" 0 65.8752 104 -6 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 88 38 0 0 0 0 0 0 0 0 0 0
+node "m1_38_n14#" 1 171.396 38 -14 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 200 108 0 0 0 0 0 0 0 0 0 0
+node "m1_14_n66#" 4 2738.59 14 -66 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104 70 1220 472 0 0 0 0 0 0 0 0
+node "m1_n9_20#" 0 40.692 -9 20 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40 28 0 0 0 0 0 0 0 0 0 0
+node "m1_5_n16#" 4 2573.74 5 -16 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 97 68 1119 444 0 0 0 0 0 0 0 0
+cap "m1_38_n44#" "m1_38_n14#" 98.9712
+subcap "m1_14_n66#" -347.498
+subcap "m1_5_n16#" -2216.05
+cap "nand_0/a_n5_n50#" "inverter_0/a_7_n16#" -7.10543e-15
+cap "inverter_0/a_7_n16#" "inverter_1/a_14_n16#" 110.46
+cap "inverter_1/a_6_8#" "inverter_0/a_7_n16#" 151.61
+cap "inverter_0/a_7_n16#" "inverter_0/a_14_n16#" 41.238
+cap "inverter_0/a_7_n16#" "inverter_1/w_0_0#" 137.758
+cap "inverter_1/w_0_0#" "inverter_1/a_6_n7#" -1.42109e-14
+cap "inverter_1/a_14_n16#" "inverter_0/a_14_n16#" -8.2476
+cap "inverter_1/a_6_8#" "inverter_0/a_6_n7#" 96.714
+cap "inverter_1/a_6_8#" "inverter_1/w_0_0#" 26.1
+subcap "m1_n9_20#" -51.1877
+cap "inverter_0/a_6_8#" "inverter_0/w_0_0#" 179.518
+merge "nand_0/a_n20_8#" "m1_104_n6#" -29.6256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -22 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/a_6_n54#" "inverter_1/a_14_n16#" -25.8348 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -22 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/a_14_n16#" "m1_38_n44#"
+merge "nand_0/a_n5_8#" "inverter_0/a_6_8#" -756.561 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -97 -68 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/a_6_8#" "inverter_1/a_6_8#"
+merge "inverter_1/a_6_8#" "m1_5_n16#"
+merge "inverter_1/a_6_n7#" "m1_n9_n46#" -11.2836 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4 -10 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/a_n21_n50#" "inverter_1/a_7_n16#" -560.275 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -104 -70 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/a_7_n16#" "inverter_0/a_7_n16#"
+merge "inverter_0/a_7_n16#" "m1_14_n66#"
+merge "nand_0/a_n9_n54#" "inverter_0/a_14_n16#" -36.1608 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32 -26 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/a_14_n16#" "m1_38_n14#"
+merge "inverter_0/a_6_n7#" "m1_n9_20#" -10.9677 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 -10 0 0 0 0 0 0 0 0 0 0

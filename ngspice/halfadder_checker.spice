@@ -1,0 +1,27 @@
+* .include halfadder.sub
+.include 22nm_MGK.pm
+.include and2.sub
+.include halfadder.sub
+.include fulladder.sub
+.include 4bitadder.sub
+
+.param SUPPLY = 1
+
+
+* -------------------------INPUT LINES-------------------------
+VinB a gnd PWL 0ns 0 20ns 0 21ns 'SUPPLY' 40ns 'SUPPLY' 41ns 0 60ns 0 61ns 'SUPPLY' 80ns 'SUPPLY' DC 'SUPPLY'
+VinC b gnd PWL 0ns 0 40ns 0 41ns 'SUPPLY' 80ns 'SUPPLY' DC 'SUPPLY'
+
+
+* ----------------------CALLING THE CUBCIRCUIT-----------------
+X1 a b n_sum n_carry 0 'SUPPLY' HalfAdder
+
+
+.control
+tran 10NS 80NS
+
+plot v(a) v(b)
+plot v(n_sum)
+plot v(n_carry)
+.endc
+.end

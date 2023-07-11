@@ -1,0 +1,55 @@
+* subcircuit for 3 bit full adder using 28 mosfets (14 pmos + 14 nmos)
+* technology used is TSMC_180nm.txt
+* the nodes a b c d are input nodes 
+
+* M1 D G S B nmos/P w=8 l=4
+
+* -----------------SUBCIRCUIT OF 3-BIT FULL ADDER--------------
+.subckt FullAdder a b c n_sum n_carry gnd high
+
+* .param SUPPLY = 0.6
+* .global high gnd
+* .param width_nmos=44
+* .param width_pmos=44
+* .param length_nmos=22
+* .param length_pmos=22
+
+
+
+Mp1     n0 a high high pmos W=44nm L=22nm
+Mp2     n2 b n0  n0  pmos W=44nm L=22nm
+Mp3     n3 a high high pmos W=44nm L=22nm
+Mp4     n3 b high high pmos W=44nm L=22nm
+Mp5     n2 c n3  n3  pmos W=44nm L=22nm
+Mp6     n5 c high high pmos W=44nm L=22nm
+Mp7     n5 a high high pmos W=44nm L=22nm
+Mp8     n5 b high high pmos W=44nm L=22nm
+Mp9     n7 n2 n5 n5  pmos W=44nm L=22nm
+Mp10    n8 a high high pmos W=44nm L=22nm
+Mp11    n9 b n8  n8  pmos W=44nm L=22nm
+Mp12    n7 c n9  n9  pmos W=44nm L=22nm
+
+Mp13    n_sum n7 high high pmos W=44nm L=22nm
+Mp14    n_carry n2 high high pmos W=44nm L=22nm
+
+Mn1     n2 b n1  n1  nmos W=44nm L=22nm
+Mn2     n1 a gnd gnd nmos W=44nm L=22nm
+Mn3     n2 c n4  n4  nmos W=44nm L=22nm
+Mn4     n4 a gnd gnd nmos W=44nm L=22nm
+Mn5     n4 b gnd gnd nmos W=44nm L=22nm
+Mn6     n6 c gnd gnd nmos W=44nm L=22nm
+Mn7     n6 a gnd gnd nmos W=44nm L=22nm
+Mn8     n6 b gnd gnd nmos W=44nm L=22nm
+Mn9     n7 n2 n6 n6  nmos W=44nm L=22nm
+Mn10    n7 c n10 n10 nmos W=44nm L=22nm
+Mn11    n10 b n11 n11 nmos W=44nm L=22nm
+Mn12    n11 a gnd gnd nmos W=44nm L=22nm
+
+Mn13    n_sum n7 gnd gnd nmos W=44nm L=22nm
+Mn14    n_carry n2 gnd gnd nmos W=44nm L=22nm
+
+
+.ends FullAdder
+* ----------------------END OF SUBCIRCUIT----------------------
+
+.end

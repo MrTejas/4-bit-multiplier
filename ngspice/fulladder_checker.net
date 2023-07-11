@@ -1,0 +1,23 @@
+.include 22nm_MGK.pm
+
+
+.param SUPPLY = 0.6
+.global vdd gnd
+* -------------------------INPUT LINES-------------------------
+VinA a gnd PWL 0ns 0 10ns 0 11ns 'SUPPLY' 20ns 'SUPPLY' 21ns 0 30ns 0 31ns 'SUPPLY' 40ns 'SUPPLY' 41ns 0 50ns 0 51ns 'SUPPLY' 60ns 'SUPPLY' 61ns 0 70ns 0 71ns 'SUPPLY' 80ns 'SUPPLY' DC 'SUPPLY'
+VinB b gnd PWL 0ns 0 20ns 0 21ns 'SUPPLY' 40ns 'SUPPLY' 41ns 0 60ns 0 61ns 'SUPPLY' 80ns 'SUPPLY' DC 'SUPPLY'
+VinC c gnd PWL 0ns 0 40ns 0 41ns 'SUPPLY' 80ns 'SUPPLY' DC 'SUPPLY'
+
+* ----------------------CALLING THE CUBCIRCUIT-----------------
+X1 a b c n_sum n_carry gnd FullAdder
+
+
+.control
+tran 10NS 80NS
+plot v(a) v(b) v(c)
+
+
+plot v(n_sum)
+plot v(n_carry)
+.endc
+.end

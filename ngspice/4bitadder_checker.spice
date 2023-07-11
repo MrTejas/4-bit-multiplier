@@ -1,0 +1,57 @@
+* circuit for checking 4 bit adder
+.include 22nm_MGK.pm
+.param SUPPLY = 1
+.param LAMBDA = 22n 
+.include and2.sub
+* .include inverter.sub
+.include halfadder.sub
+.include fulladder.sub
+.include 4bitadder.sub
+*given lambda = length and length is given as 22nm thus lambda = 22nm
+.param width_N =  {2*LAMBDA}
+.param width_P =   {2*LAMBDA} 
+.global gnd vdd
+VDS vdd gnd DC 'SUPPLY'
+va A0 gnd pulse 0 1 0ns 10ps 10ps 10ns 20ns
+vb A1 gnd pulse 0 1 0ns 10ps 10ps 10ns 20ns
+vc A2 gnd pulse 0 1 10ns 10ps 10ps 10ns 20ns
+vd A3 gnd pulse 0 1 0ns 10ps 10ps 10ns 20ns
+
+ve B0 gnd pulse 0 1 10ns 10ps 10ps 10ns 20ns
+vf B1 gnd pulse 0 1 0ns 10ps 10ps 10ns 20ns
+vg B2 gnd pulse 0 1 10ns 10ps 10ps 10ns 20ns
+vh B3 gnd pulse 0 1 0ns 10ps 10ps 10ns 20ns
+
+
+* vA0 A0 gnd 0 DC
+* vA1 A1 gnd 0 DC
+* vA2 A2 gnd 0 DC
+* vA3 A3 gnd 0 DC
+
+* vB0 B0 gnd 0 DC
+* vB1 B1 gnd 0 DC
+* vB2 B2 gnd 0 DC
+* vB3 B3 gnd 0 DC
+
+
+
+X1 A0 A1 A2 A3 B0 B1 B2 B3 S0 S1 S2 S3 C4 gnd vdd 4bitadder
+
+
+
+.tran 1n 120n
+
+
+.control
+run
+
+* let mypower = v(S1)*i(Vtest)
+* plot mypower
+
+
+
+plot v(A0) 2+v(A1) 4+v(A2) 6+v(A3) 
+plot v(B0) 2+v(B1) 4+v(B2) 6+v(B3) 
+plot v(S0) 2+v(S1) 4+v(S2) 6+v(S3) 8+v(C4)
+.endc
+.end

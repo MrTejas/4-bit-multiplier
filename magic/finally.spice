@@ -1,0 +1,47 @@
+* SPICE3 file created from inverter_test.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+
+
+
+M1000 out inA gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=20 ps=18
+M1001 out inA vdd vdd CMOSP w=9 l=2
++  ad=45 pd=28 as=54 ps=30
+C0 gnd out 0.07fF
+C1 vdd vdd 0.10fF
+C2 inA vdd 0.08fF
+C3 gnd inA 0.02fF
+C4 out vdd 0.10fF
+C5 out inA 0.03fF
+C6 out vdd 0.04fF
+C7 gnd Gnd 0.12fF
+C8 out Gnd 0.08fF
+C9 vdd Gnd 0.04fF
+C10 inA Gnd 0.19fF
+C11 vdd Gnd 0.73fF
+
+
+
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(out)+30
+
+.endc
+
+.end

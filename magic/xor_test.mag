@@ -1,0 +1,21 @@
+magic
+tech scmos
+timestamp 1669289473
+<< metal1 >>
+rect 265 107 274 111
+rect -5 91 4 95
+rect -5 82 4 86
+<< metal2 >>
+rect 134 218 138 223
+rect 138 -14 142 -9
+use xor  xor_0
+timestamp 1669289427
+transform 1 0 22 0 1 41
+box -22 -52 247 179
+<< labels >>
+rlabel metal1 -5 91 4 95 3 inA
+rlabel metal1 265 107 274 111 7 out
+rlabel metal1 -5 82 4 86 3 inB
+rlabel metal2 135 221 135 221 5 vdd
+rlabel metal2 139 -13 139 -13 1 gnd
+<< end >>

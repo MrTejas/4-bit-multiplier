@@ -1,0 +1,65 @@
+* SPICE3 file created from and.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+
+
+M1000 k1 inB nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=116 ps=58
+M1002 k1 inB vdd nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=153 ps=70
+M1003 vdd inA k1 nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 out k1 gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 out k1 vdd inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+C0 nand_0/w_n27_n3# inA 0.13fF
+C1 inA k1 0.30fF
+C2 nand_0/w_n27_n3# inB 0.13fF
+C3 vdd inverter_0/w_0_0# 0.10fF
+C4 inB k1 0.20fF
+C5 nand_0/w_n27_n3# vdd 0.04fF
+C6 inA inB 0.33fF
+C7 out inverter_0/w_0_0# 0.04fF
+C8 gnd nand_0/a_n5_n50# 0.05fF
+C9 out k1 0.03fF
+C10 gnd k1 0.07fF
+C11 vdd out 0.10fF
+C12 inB gnd 0.08fF
+C13 out gnd 0.07fF
+C14 inverter_0/w_0_0# k1 0.08fF
+C15 nand_0/w_n27_n3# k1 0.13fF
+C16 inB nand_0/a_n5_n50# 0.08fF
+C17 gnd Gnd 0.74fF
+C18 out Gnd 0.17fF
+C19 vdd Gnd 0.54fF
+C20 k1 Gnd 0.67fF
+C21 inverter_0/w_0_0# Gnd 0.73fF
+C22 nand_0/a_n5_n50# Gnd 0.02fF
+C23 inB Gnd 0.48fF
+C24 inA Gnd 0.45fF
+C25 nand_0/w_n27_n3# Gnd 1.55fF
+
+
+.tran 0.1n 40n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(k1)+20 v(out)+30
+
+.endc
+
+.end

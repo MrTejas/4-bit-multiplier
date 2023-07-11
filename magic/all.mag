@@ -1,0 +1,29 @@
+magic
+tech scmos
+timestamp 1668922861
+<< metal1 >>
+rect 68 105 106 109
+rect 68 66 72 105
+rect 158 62 162 120
+rect 158 58 197 62
+rect 68 -8 72 58
+rect 155 48 212 51
+rect 155 10 159 48
+rect 68 -12 118 -8
+use nand  nand_0
+timestamp 1668922550
+transform 1 0 25 0 1 79
+box -31 -79 47 32
+use nand  nand_1
+timestamp 1668922550
+transform 1 0 115 0 1 141
+box -31 -79 47 32
+use nand  nand_2
+timestamp 1668922550
+transform 1 0 112 0 1 23
+box -31 -79 47 32
+use nand  nand_3
+timestamp 1668922550
+transform 1 0 206 0 1 86
+box -31 -79 47 32
+<< end >>

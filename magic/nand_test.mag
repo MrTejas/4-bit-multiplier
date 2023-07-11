@@ -1,0 +1,23 @@
+magic
+tech scmos
+timestamp 1669285728
+<< polycontact >>
+rect 22 48 26 52
+rect 37 41 41 45
+<< metal1 >>
+rect 22 111 25 122
+rect 73 62 104 65
+rect -16 48 22 52
+rect -1 41 37 45
+rect 20 -8 23 3
+use nand  nand_0
+timestamp 1669285691
+transform 1 0 31 0 1 80
+box -31 -79 47 32
+<< labels >>
+rlabel metal1 -11 49 -11 49 3 inA
+rlabel metal1 8 44 8 44 1 inB
+rlabel metal1 23 119 23 119 5 vdd
+rlabel metal1 21 -6 21 -6 1 gnd
+rlabel metal1 99 64 99 64 7 out
+<< end >>

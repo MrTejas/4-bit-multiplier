@@ -1,0 +1,319 @@
+* SPICE3 file created from fulladder_test.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=5
+.option scale=0.09u
+.global vdd gnd
+
+
+Vdd vdd gnd 'SUPPLY'
+vinA inA gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 10ns 20ns
+vinB inB gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 20ns 40ns
+vinC inC gnd pulse 0 'SUPPLY' 0ns 0.1ns 0.1ns 40ns 80ns
+
+
+
+M1000 fulladder_0/halfadder_0/and_0/m1_59_58# inB fulladder_0/halfadder_0/and_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 fulladder_0/halfadder_0/and_0/nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=1136 ps=512
+M1002 fulladder_0/halfadder_0/and_0/m1_59_58# inB vdd fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=1305 ps=560
+M1003 vdd inA fulladder_0/halfadder_0/and_0/m1_59_58# fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 fulladder_0/m1_n28_112# fulladder_0/halfadder_0/and_0/m1_59_58# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 fulladder_0/m1_n28_112# fulladder_0/halfadder_0/and_0/m1_59_58# vdd fulladder_0/halfadder_0/and_0/inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+M1006 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/nand_1/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1007 fulladder_0/halfadder_0/xor_0/nand_1/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/m1_51_58# vdd fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1009 vdd inA fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1010 fulladder_0/halfadder_0/xor_0/m1_51_58# inB fulladder_0/halfadder_0/xor_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1011 fulladder_0/halfadder_0/xor_0/nand_0/a_n5_n50# inA gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1012 fulladder_0/halfadder_0/xor_0/m1_51_58# inB vdd fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1013 vdd inA fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1014 fulladder_0/halfadder_0/xor_0/m1_140_2# inB fulladder_0/halfadder_0/xor_0/nand_2/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1015 fulladder_0/halfadder_0/xor_0/nand_2/a_n5_n50# fulladder_0/halfadder_0/xor_0/m1_51_58# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1016 fulladder_0/halfadder_0/xor_0/m1_140_2# inB vdd fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1017 vdd fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1018 fulladder_0/m1_411_129# fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/nand_3/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1019 fulladder_0/halfadder_0/xor_0/nand_3/a_n5_n50# fulladder_0/halfadder_0/xor_0/m1_144_120# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1020 fulladder_0/m1_411_129# fulladder_0/halfadder_0/xor_0/m1_140_2# vdd fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1021 vdd fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/m1_411_129# fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1022 fulladder_0/halfadder_1/and_0/m1_59_58# inC fulladder_0/halfadder_1/and_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1023 fulladder_0/halfadder_1/and_0/nand_0/a_n5_n50# fulladder_0/m1_411_129# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1024 fulladder_0/halfadder_1/and_0/m1_59_58# inC vdd fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1025 vdd fulladder_0/m1_411_129# fulladder_0/halfadder_1/and_0/m1_59_58# fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1026 fulladder_0/m1_n30_n19# fulladder_0/halfadder_1/and_0/m1_59_58# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1027 fulladder_0/m1_n30_n19# fulladder_0/halfadder_1/and_0/m1_59_58# vdd fulladder_0/halfadder_1/and_0/inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+M1028 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/halfadder_1/xor_0/nand_1/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1029 fulladder_0/halfadder_1/xor_0/nand_1/a_n5_n50# fulladder_0/m1_411_129# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1030 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/m1_51_58# vdd fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1031 vdd fulladder_0/m1_411_129# fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1032 fulladder_0/halfadder_1/xor_0/m1_51_58# inC fulladder_0/halfadder_1/xor_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1033 fulladder_0/halfadder_1/xor_0/nand_0/a_n5_n50# fulladder_0/m1_411_129# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1034 fulladder_0/halfadder_1/xor_0/m1_51_58# inC vdd fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1035 vdd fulladder_0/m1_411_129# fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1036 fulladder_0/halfadder_1/xor_0/m1_140_2# inC fulladder_0/halfadder_1/xor_0/nand_2/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1037 fulladder_0/halfadder_1/xor_0/nand_2/a_n5_n50# fulladder_0/halfadder_1/xor_0/m1_51_58# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1038 fulladder_0/halfadder_1/xor_0/m1_140_2# inC vdd fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1039 vdd fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1040 sum fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/nand_3/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1041 fulladder_0/halfadder_1/xor_0/nand_3/a_n5_n50# fulladder_0/halfadder_1/xor_0/m1_144_120# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1042 sum fulladder_0/halfadder_1/xor_0/m1_140_2# vdd fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1043 vdd fulladder_0/halfadder_1/xor_0/m1_144_120# sum fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1044 carry fulladder_0/or_0/m1_38_n44# fulladder_0/or_0/nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1045 fulladder_0/or_0/nand_0/a_n5_n50# fulladder_0/or_0/m1_38_n14# gnd Gnd nfet w=8 l=4
++  ad=0 pd=0 as=0 ps=0
+M1046 carry fulladder_0/or_0/m1_38_n44# vdd fulladder_0/or_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=0 ps=0
+M1047 vdd fulladder_0/or_0/m1_38_n14# carry fulladder_0/or_0/nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1048 fulladder_0/or_0/m1_38_n14# fulladder_0/m1_n28_112# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1049 fulladder_0/or_0/m1_38_n14# fulladder_0/m1_n28_112# vdd fulladder_0/or_0/inverter_0/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+M1050 fulladder_0/or_0/m1_38_n44# fulladder_0/m1_n30_n19# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1051 fulladder_0/or_0/m1_38_n44# fulladder_0/m1_n30_n19# vdd fulladder_0/or_0/inverter_1/w_0_0# pfet w=9 l=2
++  ad=45 pd=28 as=0 ps=0
+C0 fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# 0.13fF
+C1 gnd fulladder_0/halfadder_1/xor_0/m1_140_2# 0.13fF
+C2 fulladder_0/or_0/nand_0/w_n27_n3# fulladder_0/or_0/m1_38_n44# 0.13fF
+C3 fulladder_0/halfadder_1/and_0/m1_59_58# fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# 0.13fF
+C4 fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/m1_411_129# 0.20fF
+C5 fulladder_0/m1_n28_112# gnd 0.09fF
+C6 fulladder_0/m1_n30_n19# fulladder_0/halfadder_1/and_0/inverter_0/w_0_0# 0.04fF
+C7 fulladder_0/halfadder_1/and_0/m1_59_58# fulladder_0/m1_411_129# 0.30fF
+C8 fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/m1_144_120# 0.46fF
+C9 gnd fulladder_0/halfadder_1/xor_0/nand_0/a_n5_n50# 0.05fF
+C10 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/m1_411_129# 0.32fF
+C11 vdd inB 0.26fF
+C12 vdd fulladder_0/or_0/nand_0/w_n27_n3# 0.04fF
+C13 gnd fulladder_0/halfadder_0/xor_0/nand_0/a_n5_n50# 0.05fF
+C14 fulladder_0/or_0/nand_0/a_n5_n50# gnd 0.05fF
+C15 gnd fulladder_0/halfadder_0/xor_0/m1_140_2# 0.13fF
+C16 fulladder_0/m1_411_129# fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# 0.13fF
+C17 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# 0.13fF
+C18 gnd fulladder_0/halfadder_1/and_0/m1_59_58# 0.07fF
+C19 gnd fulladder_0/halfadder_1/xor_0/m1_144_120# 0.05fF
+C20 fulladder_0/or_0/m1_38_n14# fulladder_0/or_0/m1_38_n44# 0.39fF
+C21 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/m1_411_129# 0.30fF
+C22 vdd fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# 0.04fF
+C23 fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# 0.13fF
+C24 inC fulladder_0/halfadder_1/xor_0/m1_51_58# 0.63fF
+C25 vdd fulladder_0/halfadder_1/and_0/inverter_0/w_0_0# 0.10fF
+C26 vdd fulladder_0/or_0/m1_38_n14# 0.10fF
+C27 gnd fulladder_0/m1_411_129# 0.05fF
+C28 inA fulladder_0/halfadder_0/and_0/m1_59_58# 0.30fF
+C29 gnd fulladder_0/halfadder_0/xor_0/m1_144_120# 0.05fF
+C30 inB fulladder_0/halfadder_0/and_0/nand_0/a_n5_n50# 0.08fF
+C31 gnd fulladder_0/halfadder_1/xor_0/nand_1/a_n5_n50# 0.05fF
+C32 inB fulladder_0/halfadder_0/xor_0/m1_51_58# 0.63fF
+C33 fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# fulladder_0/m1_411_129# 0.13fF
+C34 vdd fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# 0.04fF
+C35 vdd inA 0.95fF
+C36 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# 0.13fF
+C37 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# 0.13fF
+C38 vdd fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# 0.04fF
+C39 fulladder_0/m1_n28_112# fulladder_0/halfadder_0/and_0/m1_59_58# 0.03fF
+C40 fulladder_0/or_0/inverter_0/w_0_0# fulladder_0/or_0/m1_38_n14# 0.04fF
+C41 gnd carry 0.05fF
+C42 fulladder_0/halfadder_1/and_0/m1_59_58# fulladder_0/m1_n30_n19# 0.03fF
+C43 fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C44 fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# 0.13fF
+C45 fulladder_0/m1_411_129# fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# 0.13fF
+C46 fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/nand_1/a_n5_n50# 0.08fF
+C47 fulladder_0/m1_411_129# fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# 0.13fF
+C48 gnd fulladder_0/halfadder_1/xor_0/nand_2/a_n5_n50# 0.05fF
+C49 fulladder_0/m1_n28_112# vdd 0.20fF
+C50 fulladder_0/or_0/nand_0/a_n5_n50# fulladder_0/or_0/m1_38_n44# 0.08fF
+C51 fulladder_0/m1_n28_112# fulladder_0/halfadder_0/and_0/inverter_0/w_0_0# 0.04fF
+C52 fulladder_0/halfadder_0/xor_0/m1_51_58# fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C53 gnd fulladder_0/halfadder_0/xor_0/nand_2/a_n5_n50# 0.05fF
+C54 inB fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C55 fulladder_0/halfadder_0/xor_0/m1_51_58# inA 0.63fF
+C56 fulladder_0/halfadder_1/xor_0/m1_144_120# vdd 0.13fF
+C57 gnd fulladder_0/m1_n30_n19# 0.42fF
+C58 fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# fulladder_0/halfadder_0/and_0/m1_59_58# 0.13fF
+C59 fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# fulladder_0/halfadder_0/xor_0/m1_51_58# 0.13fF
+C60 gnd fulladder_0/or_0/inverter_1/w_0_0# 0.14fF
+C61 fulladder_0/m1_n28_112# fulladder_0/or_0/inverter_0/w_0_0# 0.08fF
+C62 fulladder_0/halfadder_1/xor_0/nand_3/a_n5_n50# fulladder_0/halfadder_1/xor_0/m1_140_2# 0.08fF
+C63 vdd fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# 0.04fF
+C64 fulladder_0/or_0/nand_0/w_n27_n3# fulladder_0/or_0/m1_38_n14# 0.13fF
+C65 vdd fulladder_0/m1_411_129# 0.79fF
+C66 gnd fulladder_0/halfadder_0/and_0/m1_59_58# 0.07fF
+C67 fulladder_0/halfadder_1/and_0/nand_0/a_n5_n50# inC 0.08fF
+C68 fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# vdd 0.04fF
+C69 gnd fulladder_0/or_0/m1_38_n44# 0.26fF
+C70 fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/m1_51_58# 0.30fF
+C71 vdd fulladder_0/halfadder_0/xor_0/m1_144_120# 0.13fF
+C72 fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# vdd 0.04fF
+C73 fulladder_0/halfadder_1/xor_0/m1_140_2# inC 0.20fF
+C74 carry fulladder_0/or_0/m1_38_n44# 0.20fF
+C75 inB inA 3.46fF
+C76 gnd vdd 0.15fF
+C77 fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/m1_51_58# 0.30fF
+C78 inB fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# 0.13fF
+C79 inC fulladder_0/halfadder_1/xor_0/nand_0/a_n5_n50# 0.08fF
+C80 fulladder_0/halfadder_0/xor_0/nand_3/a_n5_n50# fulladder_0/halfadder_0/xor_0/m1_140_2# 0.08fF
+C81 fulladder_0/halfadder_1/xor_0/m1_144_120# fulladder_0/halfadder_1/xor_0/m1_51_58# 0.20fF
+C82 vdd fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# 0.04fF
+C83 inA fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# 0.13fF
+C84 fulladder_0/or_0/inverter_1/w_0_0# fulladder_0/m1_n30_n19# 0.08fF
+C85 inC fulladder_0/halfadder_1/and_0/m1_59_58# 0.20fF
+C86 fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/m1_411_129# 0.63fF
+C87 inB fulladder_0/halfadder_0/xor_0/nand_0/a_n5_n50# 0.08fF
+C88 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/m1_51_58# 0.20fF
+C89 gnd fulladder_0/halfadder_1/xor_0/nand_3/a_n5_n50# 0.05fF
+C90 fulladder_0/m1_n30_n19# fulladder_0/or_0/m1_38_n44# 0.03fF
+C91 vdd fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# 0.04fF
+C92 inC fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# 0.13fF
+C93 fulladder_0/halfadder_0/xor_0/m1_140_2# inB 0.20fF
+C94 fulladder_0/or_0/inverter_1/w_0_0# fulladder_0/or_0/m1_38_n44# 0.04fF
+C95 vdd fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# 0.04fF
+C96 fulladder_0/halfadder_1/xor_0/nand_1/a_n5_n50# fulladder_0/halfadder_1/xor_0/m1_51_58# 0.08fF
+C97 inC fulladder_0/m1_411_129# 3.26fF
+C98 gnd fulladder_0/halfadder_0/and_0/nand_0/a_n5_n50# 0.05fF
+C99 gnd fulladder_0/halfadder_0/xor_0/m1_51_58# 0.23fF
+C100 inA fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C101 gnd fulladder_0/halfadder_1/xor_0/m1_51_58# 0.23fF
+C102 vdd fulladder_0/m1_n30_n19# 0.10fF
+C103 fulladder_0/or_0/inverter_1/w_0_0# vdd 0.13fF
+C104 fulladder_0/m1_n28_112# fulladder_0/or_0/m1_38_n14# 0.03fF
+C105 gnd fulladder_0/halfadder_0/xor_0/nand_3/a_n5_n50# 0.05fF
+C106 sum fulladder_0/halfadder_1/xor_0/m1_140_2# 0.20fF
+C107 gnd inC 0.45fF
+C108 fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# inB 0.13fF
+C109 vdd fulladder_0/or_0/m1_38_n44# 0.10fF
+C110 fulladder_0/halfadder_1/and_0/m1_59_58# fulladder_0/halfadder_1/and_0/inverter_0/w_0_0# 0.08fF
+C111 fulladder_0/halfadder_0/and_0/m1_59_58# fulladder_0/halfadder_0/and_0/inverter_0/w_0_0# 0.08fF
+C112 vdd fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# 0.04fF
+C113 gnd inB 0.45fF
+C114 fulladder_0/halfadder_1/xor_0/nand_2/a_n5_n50# inC 0.08fF
+C115 fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# 0.13fF
+C116 sum fulladder_0/halfadder_1/xor_0/m1_144_120# 0.30fF
+C117 fulladder_0/halfadder_1/xor_0/m1_51_58# fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# 0.13fF
+C118 fulladder_0/or_0/nand_0/w_n27_n3# carry 0.13fF
+C119 inC fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# 0.13fF
+C120 fulladder_0/halfadder_0/xor_0/m1_140_2# fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# 0.13fF
+C121 vdd fulladder_0/halfadder_0/and_0/inverter_0/w_0_0# 0.10fF
+C122 gnd fulladder_0/halfadder_0/xor_0/nand_1/a_n5_n50# 0.05fF
+C123 gnd fulladder_0/or_0/m1_38_n14# 0.11fF
+C124 vdd fulladder_0/or_0/inverter_0/w_0_0# 0.28fF
+C125 fulladder_0/halfadder_0/xor_0/m1_144_120# fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# 0.13fF
+C126 sum fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# 0.13fF
+C127 fulladder_0/halfadder_1/xor_0/m1_140_2# fulladder_0/halfadder_1/xor_0/m1_144_120# 0.46fF
+C128 fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# inA 0.13fF
+C129 fulladder_0/halfadder_0/xor_0/m1_144_120# inA 0.32fF
+C130 gnd sum 0.05fF
+C131 fulladder_0/or_0/m1_38_n14# carry 0.30fF
+C132 fulladder_0/halfadder_0/xor_0/nand_2/a_n5_n50# inB 0.08fF
+C133 fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# fulladder_0/halfadder_1/xor_0/m1_51_58# 0.13fF
+C134 inC fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# 0.13fF
+C135 fulladder_0/halfadder_1/and_0/nand_0/a_n5_n50# gnd 0.05fF
+C136 vdd inC 0.26fF
+C137 inB fulladder_0/halfadder_0/and_0/m1_59_58# 0.20fF
+C138 fulladder_0/or_0/inverter_1/w_0_0# Gnd 0.73fF
+C139 fulladder_0/m1_n28_112# Gnd 0.55fF
+C140 fulladder_0/or_0/inverter_0/w_0_0# Gnd 0.73fF
+C141 fulladder_0/or_0/nand_0/a_n5_n50# Gnd 0.02fF
+C142 gnd Gnd 36.76fF
+C143 carry Gnd 0.61fF
+C144 fulladder_0/or_0/m1_38_n44# Gnd 0.68fF
+C145 fulladder_0/or_0/m1_38_n14# Gnd 0.69fF
+C146 fulladder_0/or_0/nand_0/w_n27_n3# Gnd 1.55fF
+C147 fulladder_0/halfadder_1/xor_0/nand_3/a_n5_n50# Gnd 0.02fF
+C148 sum Gnd 5.68fF
+C149 fulladder_0/halfadder_1/xor_0/m1_140_2# Gnd 1.13fF
+C150 fulladder_0/halfadder_1/xor_0/m1_144_120# Gnd 1.16fF
+C151 fulladder_0/halfadder_1/xor_0/nand_3/w_n27_n3# Gnd 1.55fF
+C152 fulladder_0/halfadder_1/xor_0/nand_2/a_n5_n50# Gnd 0.02fF
+C153 inC Gnd 3.20fF
+C154 fulladder_0/halfadder_1/xor_0/nand_2/w_n27_n3# Gnd 1.55fF
+C155 fulladder_0/halfadder_1/xor_0/nand_0/a_n5_n50# Gnd 0.02fF
+C156 fulladder_0/halfadder_1/xor_0/nand_0/w_n27_n3# Gnd 1.55fF
+C157 fulladder_0/halfadder_1/xor_0/nand_1/a_n5_n50# Gnd 0.02fF
+C158 vdd Gnd 27.77fF
+C159 fulladder_0/halfadder_1/xor_0/m1_51_58# Gnd 1.80fF
+C160 fulladder_0/m1_411_129# Gnd 3.30fF
+C161 fulladder_0/halfadder_1/xor_0/nand_1/w_n27_n3# Gnd 1.55fF
+C162 fulladder_0/m1_n30_n19# Gnd 4.57fF
+C163 fulladder_0/halfadder_1/and_0/m1_59_58# Gnd 0.67fF
+C164 fulladder_0/halfadder_1/and_0/inverter_0/w_0_0# Gnd 0.73fF
+C165 fulladder_0/halfadder_1/and_0/nand_0/a_n5_n50# Gnd 0.02fF
+C166 fulladder_0/halfadder_1/and_0/nand_0/w_n27_n3# Gnd 1.55fF
+C167 fulladder_0/halfadder_0/xor_0/nand_3/a_n5_n50# Gnd 0.02fF
+C168 fulladder_0/halfadder_0/xor_0/m1_140_2# Gnd 1.13fF
+C169 fulladder_0/halfadder_0/xor_0/m1_144_120# Gnd 1.16fF
+C170 fulladder_0/halfadder_0/xor_0/nand_3/w_n27_n3# Gnd 1.55fF
+C171 fulladder_0/halfadder_0/xor_0/nand_2/a_n5_n50# Gnd 0.02fF
+C172 inB Gnd 1.54fF
+C173 fulladder_0/halfadder_0/xor_0/nand_2/w_n27_n3# Gnd 1.55fF
+C174 fulladder_0/halfadder_0/xor_0/nand_0/a_n5_n50# Gnd 0.02fF
+C175 fulladder_0/halfadder_0/xor_0/nand_0/w_n27_n3# Gnd 1.55fF
+C176 fulladder_0/halfadder_0/xor_0/nand_1/a_n5_n50# Gnd 0.02fF
+C177 fulladder_0/halfadder_0/xor_0/m1_51_58# Gnd 1.80fF
+C178 inA Gnd 2.09fF
+C179 fulladder_0/halfadder_0/xor_0/nand_1/w_n27_n3# Gnd 1.55fF
+C180 fulladder_0/halfadder_0/and_0/m1_59_58# Gnd 0.67fF
+C181 fulladder_0/halfadder_0/and_0/inverter_0/w_0_0# Gnd 0.73fF
+C182 fulladder_0/halfadder_0/and_0/nand_0/a_n5_n50# Gnd 0.02fF
+C183 fulladder_0/halfadder_0/and_0/nand_0/w_n27_n3# Gnd 1.55fF
+
+
+
+
+.tran 0.1n 80n
+
+.control
+* set hcopycolor = 1
+* set color0=white
+* set color1=black
+
+run
+plot v(inA) v(inB)+10 v(inC)+20 v(sum)+30 v(carry)+40
+
+.endc
+
+.end

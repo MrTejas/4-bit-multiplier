@@ -1,0 +1,101 @@
+* SPICE3 file created from xor.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 m1_144_120# m1_51_58# nand_1/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1001 nand_1/a_n5_n50# m1_n22_50# nand_1/a_n21_n50# Gnd nfet w=8 l=4
++  ad=0 pd=0 as=96 ps=40
+M1002 m1_144_120# m1_51_58# nand_1/a_n5_8# nand_1/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=99 ps=40
+M1003 nand_1/a_n5_8# m1_n22_50# m1_144_120# nand_1/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1004 m1_51_58# m1_n22_n15# nand_0/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1005 nand_0/a_n5_n50# m1_n22_50# nand_0/a_n21_n50# Gnd nfet w=8 l=4
++  ad=0 pd=0 as=96 ps=40
+M1006 m1_51_58# m1_n22_n15# m1_29_108# nand_0/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=99 ps=40
+M1007 m1_29_108# m1_n22_50# m1_51_58# nand_0/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 m1_140_2# m1_n22_n15# nand_2/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1009 nand_2/a_n5_n50# m1_51_58# nand_2/a_n21_n50# Gnd nfet w=8 l=4
++  ad=0 pd=0 as=96 ps=40
+M1010 m1_140_2# m1_n22_n15# nand_2/a_n5_8# nand_2/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=99 ps=40
+M1011 nand_2/a_n5_8# m1_51_58# m1_140_2# nand_2/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+M1012 m1_233_64# m1_140_2# nand_3/a_n5_n50# Gnd nfet w=8 l=4
++  ad=88 pd=38 as=88 ps=38
+M1013 nand_3/a_n5_n50# m1_144_120# nand_3/a_n21_n50# Gnd nfet w=8 l=4
++  ad=0 pd=0 as=96 ps=40
+M1014 m1_233_64# m1_140_2# nand_3/a_n5_8# nand_3/w_n27_n3# pfet w=9 l=4
++  ad=198 pd=80 as=99 ps=40
+M1015 nand_3/a_n5_8# m1_144_120# m1_233_64# nand_3/w_n27_n3# pfet w=9 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 nand_2/a_n21_n50# m1_n22_n15# 0.08fF
+C1 m1_233_64# m1_140_2# 0.20fF
+C2 nand_0/w_n27_n3# m1_n22_n15# 0.13fF
+C3 m1_51_58# m1_n22_50# 0.63fF
+C4 m1_233_64# m1_144_120# 0.30fF
+C5 m1_140_2# m1_51_58# 0.30fF
+C6 nand_3/a_n5_8# nand_3/w_n27_n3# 0.04fF
+C7 m1_144_120# m1_n22_50# 0.32fF
+C8 nand_2/a_n5_8# nand_2/w_n27_n3# 0.04fF
+C9 nand_2/w_n27_n3# m1_n22_n15# 0.13fF
+C10 m1_51_58# m1_144_120# 0.20fF
+C11 m1_140_2# m1_144_120# 0.46fF
+C12 m1_233_64# nand_3/w_n27_n3# 0.13fF
+C13 nand_0/w_n27_n3# m1_29_108# 0.04fF
+C14 nand_1/a_n21_n50# m1_51_58# 0.08fF
+C15 nand_1/w_n27_n3# m1_n22_50# 0.13fF
+C16 m1_51_58# nand_1/w_n27_n3# 0.13fF
+C17 m1_140_2# nand_3/w_n27_n3# 0.13fF
+C18 nand_0/a_n21_n50# m1_51_58# 0.05fF
+C19 nand_1/a_n21_n50# m1_144_120# 0.05fF
+C20 m1_144_120# nand_1/w_n27_n3# 0.13fF
+C21 nand_3/w_n27_n3# m1_144_120# 0.13fF
+C22 nand_1/a_n5_n50# m1_51_58# 0.08fF
+C23 nand_3/a_n5_n50# nand_3/a_n21_n50# 0.05fF
+C24 nand_0/w_n27_n3# m1_n22_50# 0.13fF
+C25 m1_140_2# nand_2/a_n21_n50# 0.05fF
+C26 nand_0/w_n27_n3# m1_51_58# 0.13fF
+C27 nand_1/a_n21_n50# nand_1/a_n5_n50# 0.05fF
+C28 m1_n22_n15# m1_n22_50# 0.45fF
+C29 nand_1/a_n5_8# nand_1/w_n27_n3# 0.04fF
+C30 nand_0/a_n5_n50# nand_0/a_n21_n50# 0.05fF
+C31 m1_n22_n15# m1_51_58# 0.63fF
+C32 m1_140_2# m1_n22_n15# 0.20fF
+C33 nand_2/w_n27_n3# m1_51_58# 0.13fF
+C34 m1_140_2# nand_2/w_n27_n3# 0.13fF
+C35 nand_3/a_n5_n50# m1_140_2# 0.08fF
+C36 nand_3/a_n21_n50# m1_233_64# 0.05fF
+C37 m1_29_108# m1_n22_50# 0.39fF
+C38 nand_2/a_n5_n50# nand_2/a_n21_n50# 0.05fF
+C39 nand_3/a_n21_n50# m1_140_2# 0.08fF
+C40 nand_0/a_n21_n50# m1_n22_n15# 0.08fF
+C41 nand_0/a_n5_n50# m1_n22_n15# 0.08fF
+C42 nand_2/a_n5_n50# m1_n22_n15# 0.08fF
+C43 nand_3/a_n5_n50# Gnd 0.02fF
+C44 nand_3/a_n21_n50# Gnd 0.28fF
+C45 nand_3/a_n5_8# Gnd 0.24fF
+C46 m1_233_64# Gnd 0.33fF
+C47 m1_140_2# Gnd 1.13fF
+C48 nand_3/w_n27_n3# Gnd 1.55fF
+C49 nand_2/a_n5_n50# Gnd 0.02fF
+C50 nand_2/a_n21_n50# Gnd 0.28fF
+C51 nand_2/a_n5_8# Gnd 0.24fF
+C52 m1_n22_n15# Gnd 1.49fF
+C53 nand_2/w_n27_n3# Gnd 1.55fF
+C54 nand_0/a_n5_n50# Gnd 0.02fF
+C55 nand_0/a_n21_n50# Gnd 0.28fF
+C56 m1_29_108# Gnd 0.25fF
+C57 nand_0/w_n27_n3# Gnd 1.55fF
+C58 nand_1/a_n5_n50# Gnd 0.02fF
+C59 nand_1/a_n21_n50# Gnd 0.28fF
+C60 nand_1/a_n5_8# Gnd 0.24fF
+C61 m1_144_120# Gnd 1.16fF
+C62 m1_51_58# Gnd 1.40fF
+C63 m1_n22_50# Gnd 1.57fF
+C64 nand_1/w_n27_n3# Gnd 1.55fF
